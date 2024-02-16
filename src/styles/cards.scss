@@ -1,0 +1,92 @@
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.user-info-card {
+    align-items: center;
+    gap: 20px;
+
+    .info-header {
+        align-items: center;
+
+        .header-role {
+            color: $highlight;
+        }
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .buttons-wrapper {
+        flex-direction: row;
+        justify-content: right;
+        gap: 10px;
+    }
+}
+
+.user-locations-card {
+    gap: 20px;
+
+    .options-wrapper {
+        flex-direction: row;
+        justify-content: right;
+        gap: 10px;
+
+        .buttons-wrapper {
+            width: fit-content;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        input {
+            width: 250px;
+        }
+    }
+
+    .locations-wrapper {
+        .locations-header {
+            display: grid;
+            grid-template-columns: 100px 100px;
+        }
+
+        .location-wrapper {
+            .location-data {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px 0px;
+
+                .data-grid {
+                    display: grid;
+                    grid-template-columns: 100px 100px;
+                }
+            }
+
+            .delete {
+                color: red;
+            }
+        }
+
+        .new-location-wrapper {
+            input {
+                margin: 10px 0px;
+                width: 100px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+.user-activity-card {
+    grid-column: 1 / -1;
+}

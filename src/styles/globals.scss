@@ -1,0 +1,58 @@
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    transition: .2s;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: $highlight;
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+
+    &:active {
+        opacity: .8;
+    }
+}
+
+input {
+    border: 1px solid $highlight;
+    border-radius: 2px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:disabled {
+        border: 1px solid lightgray;
+    }
+}
+
+.app-wrapper {
+    background-color: $background;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 20px;
+}
