@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Opiniion QA Challenge
 
-First, run the development server:
+A QA challenge to be used during the interview process.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tasks
 
-## Learn More
+[Challenge Site](https://opiniionqachallenge.up.railway.app/)
 
-To learn more about Next.js, take a look at the following resources:
+NOTE: All data is static and will revert if the page is refreshed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### User Info Card
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We need a user info card for our User Profile page. It should inlcude the following:
+- The user's name and role.
+- Fields for their first and last name, email, and phone number.
+    - These fields should be disabled when just viewing the profile.
+- An edit button that unlocks the fields for editing.
+- In edit mode, we need to be able to update the first and last name, email, phone number, and role.
+- In edit mode, the edit button should be replaced by save and cancel buttons.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### User Locations Card
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We need a user locations card for our User Profile page. It should inlcude the following:
+- A list of all locations currently assigned to the user, including name and role.
+    - The role should match the role assigned to the user.
+- A search bar to filter the list of locations.
+- An add locations button that adds a new row to be filled out.
+- All locations must have a unique name.
+- When adding a location, the add location button should be replaced by save and cancel buttons.
+- All locations should also have a delete button to remove them from the list.
+
+## Issues
+
+### User Info Card
+
+- **In edit mode, there is no way to change the user's role.**
+- **Clicking save does nothing, but throws an error in the console.**
+- Clicking cancel does not revert any changes made.
+- The edit button is 5px larger than the rest of the buttons.
+- Bonus points if they ask if the phone number and email are being checked for actual phone numbers and emails.
+
+### User Locations Card
+
+- **Nothing enforces locations to have unique names.**
+- Locations can be added with blank or poorly cased names.
+- The cancel button has 5px extra space than the rest of the buttons.
+- The search bar is case sensitive (a poor user experience).
+- The delete button should have a cursor pointer. Bonus points if they suggest an icon.
